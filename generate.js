@@ -19,9 +19,15 @@ const data = [];
 const jabber = new Jabber.default(themeWords);
 for (let i = 0; i < LIMIT; i++) {
   const object = {
+    id: i,
     image: faker.image.urlLoremFlickr({ category: "nature" }),
     caption: jabber.createParagraph(20),
   };
+  if (i === LIMIT - 1) {
+    object.nextId = 0;
+  } else {
+    object.nextId = i + 1;
+  }
   data.push(object);
 }
 
