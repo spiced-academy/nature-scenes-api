@@ -7,6 +7,10 @@ const app = express();
 app.get("/api/data/:index", (req, res) => {
   const index = req.params["index"];
   const foundData = data[parseInt(index)];
+
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
   if (foundData) {
     res.json(foundData);
   } else {
