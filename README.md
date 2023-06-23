@@ -2,7 +2,7 @@
 
 ## Usage
 
-- `GET /api/data/:index`: returns a JSON object with data
+- `GET /api/v1/scenes/:index`: returns a JSON object with data
 - `:index` should be between 0 and 49
 
 ### Returned data
